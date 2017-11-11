@@ -11,7 +11,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
 
 /**
@@ -24,8 +26,19 @@ public class NumberConversionController implements Initializable {
     private NumberConversionModel ncmodel = new NumberConversionModel();
     @FXML
     private Label label1;
+    @FXML
+    private TextField txtNumberInput;
+    @FXML
+    private Label lblResult;
+    @FXML
+    private Button btnCalcKmToMiles;
+    @FXML
+    private Button btnCalcMilesToKm;
     
-    
+    public NumberConversionController()
+    {
+        ncmodel = new NumberConversionModel();
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -46,6 +59,24 @@ public class NumberConversionController implements Initializable {
             }
         
         
-    }    
+    } 
+   @FXML
+    private void handleButtonAction(ActionEvent event){
+        
+     Button source = (Button) event.getSource();
+        String resultAsString = "N/A";
+        double txtFieldValue = Double.parseDouble(txtNumberInput.getText());
+        double result = 0;
+        if (source == btnCalcMilesToKm)
+        {
+            result = ncmodel.getMilesFromKilometers(txtFieldValue);
+
+        } else if (source == btnCalcKmToMiles)
+        {
+            result = ncmodel.getKilometersFromMiles(txtFieldValue);
+        }
+        resultAsString = String.format("%.3f", result);
+        lblResult.setText(resultAsString);
+    }
     
 }

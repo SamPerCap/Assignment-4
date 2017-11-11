@@ -11,10 +11,22 @@ package assignment.pkg4;
  */
 public class NumberConversionModel {
     
+    private static final double MILE_TO_KM = 1.609344;
+    
     public String getGreetingsMessage(String name){
     
     return "Hello, "+name+". Greetings from the top Java developer class in town.";
     
+    }
+    public double getMilesFromKilometers(double km){
+        
+        
+        return (km / MILE_TO_KM);
+    }
+    
+    public double getKilometersFromMiles(double miles){
+        
+        return (miles * MILE_TO_KM);
     }
     
     
