@@ -69,11 +69,11 @@ public class NumberConversionController implements Initializable {
         double result = 0;
         if (source == btnCalcMilesToKm)
         {
-            result = ncmodel.getMilesFromKilometers(txtFieldValue);
+            result = ncmodel.getKilometersFromMiles(txtFieldValue);
 
         } else if (source == btnCalcKmToMiles)
         {
-            result = ncmodel.getKilometersFromMiles(txtFieldValue);
+            result = ncmodel.getMilesFromKilometers(txtFieldValue);
         }
         resultAsString = String.format("%.3f", result);
         lblResult.setText(resultAsString);

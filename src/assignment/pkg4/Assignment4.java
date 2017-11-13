@@ -19,7 +19,7 @@ public class Assignment4 extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("NumberConversion.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("TemperatureConversion.fxml"));
         
         Scene scene = new Scene(root);
         
