@@ -1,4 +1,4 @@
-package assignment.pkg4;
+package assignment.pkg4.TemperatureConversion;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package assignment.pkg4;
+package assignment.pkg4.BodyMassIndex;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,11 +15,11 @@ import javafx.stage.Stage;
  *
  * @author Samuel
  */
-public class Assignment4 extends Application {
+public class BMIExe extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("TemperatureConversion.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("BMI.fxml"));
         
         Scene scene = new Scene(root);
         

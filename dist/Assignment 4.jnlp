@@ -12,6 +12,6 @@
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Assignment 4" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="assignment.pkg4.Assignment4"  name="Assignment 4" />
+  <jfx:javafx-desc  width="800" height="600" main-class="assignment.pkg4.BodyMassIndex.BMIExe"  name="Assignment 4" />
   <update check="always"/>
 </jnlp>
